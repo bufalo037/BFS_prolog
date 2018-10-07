@@ -1,0 +1,4 @@
+input([[[1,rosu], [2,verde], [3,negru], [4,rosu], [5,albastru]],[[1,2],[2,3], [3,4], [4,5], [2,5], [1,5], [5,2]]]).
+formula(F) :- F = and(A1, A2), A1 = future(albastru), A2 = future(rosu).
+from(1).
+to(3).

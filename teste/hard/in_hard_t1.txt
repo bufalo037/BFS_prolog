@@ -1,0 +1,4 @@
+input([[[1,negru], [2,rosu], [3,rosu], [4,rosu], [5,rosu], [10,rosu], [6,negru], [7,negru], [8,negru], [9,negru], [16,negru], [11,verde], [12,verde], [13,verde], [14,verde], [15,verde]],[[1,2],[1,6],[1,11],[2,3],[3,4],[3,6],[4,5],[5,8],[5,10],[6,7],[6,12],[7,4],[7,8],[8,9],[8,14],[9,16],[10,16],[11,12],[12,13],[13,7],[13,14],[14,15],[15,16]]]).
+formula(F) :- F = and(next(rosu), and(and(future(verde), not(next(next(next(next(negru)))))), next(next(next(next(next(future(rosu)))))))).
+from(1).
+to(16).

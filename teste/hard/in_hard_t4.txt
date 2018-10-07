@@ -1,0 +1,4 @@
+input([[[1,galben], [2,rosu], [3,albastru], [4,verde], [5,rosu], [6,albastru], [7,rosu], [8,galben], [9,albastru], [10,mov]],[[1,2],[1,3],[2,6],[3,2],[3,4],[4,5],[5,6],[5,7],[5,8],[6,4],[6,5],[6,7],[7,8],[8,5],[8,9],[8,10],[9,10]]]).
+formula(F) :-  F = and(A3,A4), A1 = not(future(rosu)), A2=global(rosu), A3 = or(A1,A2), A4 = not(future(verde)).
+from(7).
+to(1).

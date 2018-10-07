@@ -1,0 +1,4 @@
+input([[[1,rosu], [2,rosu], [3,negru], [4,rosu], [5,rosu]],[[1,2], [2,3], [3,4], [4,5], [2,5], [1,5], [5,2]]]).
+formula(F) :- F = next(next(rosu)).
+from(1).
+to(3).

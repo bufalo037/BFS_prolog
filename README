@@ -1,0 +1,107 @@
+===============================================================================
+======================= Tema 2 Paradigme de Programare ========================
+============================ Costea Mihai 322CB ===============================
+===============================================================================
+
+Predicatul get_out_edges imi returneaza noduile in care pot sa ajung din nodul
+curent. Acesta se foloseste de predicatul get_last.
+
+Toata esenta temai  se gaseste in predicatul verif. Am observat ca o formula se
+poate satisface in timp ce parcurg graful. Spre exemplu daca am next(rosu) la
+pasul curent satisfac next si mai ramane ca la pasul urmatorr sa satisfac doar
+rosu. In felul asta pot in mod dinamic in functie de ce nod vizitez sa imi dau
+seama ce formula am in locul respectiv.
+Predicatul verif primeste o formula (formula curenta din nodul respectiv), un
+nod(nodul curent), si culoarea sa, si un nod de final, acest predicat intoarce
+o noua formula evaluand input-ul. Formula care va fi folosita in toti succesori
+nodului curent (pas i+1). E un fel de programare dinamica pentru ca ma bazez 
+mereu pe solutia pe care am calculat-o la pasul anterior ;).
+
+===============================================================================
+
+append_reverse este un predicat care prieste 2 liste si concateneaza prima lista
+invers la cea de a doua, si intoarce rezultatul in cel de-al 3-lea termen.
+
+===============================================================================
+
+nott e implementarea functiei not.
+
+===============================================================================
+
+Predicatul get_color primeste un nod si un graf si intoarce culoarea nodului din
+acel graf.
+
+===============================================================================
+
+verif_nodes este un predicat care primeste o lista de noduri posibil acceptate
+o alta lista de noduri existente si intoarce nodurile care nu sunt in lista a
+doua dar care sunt in prima lista( diferenta de multimi).
+
+===============================================================================
+
+multiply_element este un predicat care pune intr-o lista(param 3) atatea param1
+cate elemente sunt in lista de la param 2.
+
+===============================================================================
+
+prdicatul appendd concateneaza 2 liste.
+
+===============================================================================
+
+member este functia prezentata la curs.
+
+===============================================================================
+
+bfs_crt este un predcat care primeste o lista de noduri(reprezentatnd nodurile
+de la pasul curent din coada) o lista de formule pentr ele si o lista de path-uri
+si pentru fiecare element din coada creaza o noua lista de noduri o noua lista
+de formule si o noua lista de path-uri. Fiecare element are propria sa formula
+si propriul sau path. pentru ca cand fac bfs un posibil path minimal ar putea
+reprezenta elementele pe care l-as descoperi intr-un bfs simplu din la pasi 
+anteriori. Acest lucru este datorat faptului ca bfs-ul normal accepta orice nod
+adiacent ca fiind valid pe cand daca complic problema atasandu-i o formula
+e posibil ca un nod de la pasul anterior sa nu satisfaca formula dar sa o satisfaca
+la pasul urmator, iar acest lucru ar da un path minimal sau sa o satisfaca in 
+ambele cazuri dar din cauza ca formula mea este mai lunga si am nevoie sa 
+parcurg mai minim un numar de noduri ca sa satisfac formula spre exemplu din 
+cauza predicatului next e posibil ca nodul de la pasul anterior sa imi garanteze
+o formula mai scurta. Acest lucru adauga o gramada de eficienta deoarece pot
+descoperi parcurgand graful daca am gasit un path minimal si sa opresc parcurgerea.
+
+===============================================================================
+
+bfs este predicatul care se foloseste de bfs_crt. Acesta avanseaza in bfs.
+Pasul curent este calculat de bfs_crt iar bfs se foloseste de bfs_crt pentru a
+calcula pasul urmator. bfs_crt returneaza deasemenea lista cu nodurile formulele
+si path-urile de la pasul urmator ca bfs sa aiba ce sa ii dea ca argument inapoi
+lui bfs_crt. bfs verifica daca path-ul minim a fost setat si daca da nu mai 
+apeleaza bfs_crt si se iese din functie.
+
+===============================================================================
+
+predicatul get_path apeleaza bfs si il lasa sa isi faca magia :)
+
+===============================================================================
+===============================================================================
+
+Adaosuri de eficienta: de fiecare daca cand un perdicat cu acelas nume era 
+definit mai sus in cod si nu era necesara mergerea pe predicatele scrise mai jos
+am adaugat un cut ca sa fortez prlg-ul sa nu se mai uite la predicatele scrise
+mai jos. Cel mai bun exmplu este predicatul de verificare al formulei care are
+o gramada de instante.
+
+===============================================================================
+===============================================================================
+
+Feedback tema:
+
+Super smechera tema chiar mi-a placut ca a trebuit sa imi folosesc imaginatia
+ca sa scriu cod si a fost ceva inedit cel putin pentru mine. Nu mi s-a parut grea
+tema. Mai grea a fost prima tema in haskell. 
+Cred ca mi-a placut tema din cauza ca nu am refolosit un algoritm si sa scriu 
+mecanic cele invatate ci sa imi folosesc creierul pentru a rezolva o problema 
+diferita.
+
+===============================================================================
+===============================================================================
+
